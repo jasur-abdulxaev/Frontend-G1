@@ -1,0 +1,49 @@
+:root {
+    --primary: #EF3123;
+    --secondary: #071A3A;
+    --text: #1F2937;
+    --background: #F5F7FA;
+}
+
+.navbar {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    gap: 32px;
+    padding: 16px 40px;
+    background: white;
+    border-radius: 16px;
+    box-shadow: 0 4px 12px rgba(0, 0, 0, 0.30);
+}
+
+.logo {
+    display: inline-block;
+    padding: 10px 16px;
+    background: var(--secondary);
+    color: white;
+    font-weight: 700;
+    border-radius: 8px;
+}
+.logo span {color: var(--primary);}
+
+.menu{
+    display: flex;
+    align-items: center;
+    gap: 24px;
+}
+.menu a {
+    text-decoration: none;
+    color: var(--text);
+    font-weight: 500;
+}
+.menu a:hover {color: var(--primary);}
+
+.btn-primary {
+    display: inline-block;
+    padding: 12px 24px;
+    background: var(--primary);
+    color: white;
+    text-decoration: none;
+    border-radius: 8px;
+    font-weight: 600;
+}

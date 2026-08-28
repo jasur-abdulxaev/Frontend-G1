@@ -1,0 +1,102 @@
+/* Loyihaning umumiy rang va shrif tizimi */
+:root {
+    --primary: #EF3123;
+    --secondary: #071A3A;
+    --text: #1F2937;
+    --background: #F5F7FA;
+}
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    font-family: 'Inter', sans-serif;
+    background-color: var(--background);
+    color: var(--text);
+    padding: 40px 20px;
+}
+
+.section-title {
+    text-align: center;
+    color: var(--secondary);
+    margin-bottom: 32px;
+    font-size: 28px;
+}
+
+/* Tashqi flexbox */
+.course-container {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 24px;
+    justify-content: center;
+    max-width: 1000px;
+    margin: 0 auto;
+}
+
+/* Har bitta karta */
+.course-card {
+    flex: 1 1 280px;      /* grow: 1; shrink:1; basis:280 */
+    max-width: 320px;
+    background-color: white;
+    border-radius: 12px;
+    box-shadow: 0 4px 12px rgba(7, 26, 58, 0.1);
+    overflow: hidden;
+}
+
+.course-card_icon {
+    width: 64px;
+    height: 64px;
+    border-radius: 12px;
+    background-color: var(--primary);
+    margin: 24px auto 16px;
+
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    color: white;
+    font-size: 28px;
+}
+
+.course-card_body {
+    padding: 0 20px 24px;
+    text-align: center;
+
+    display: flex;
+    flex-direction: column;
+    flex-grow: 1;
+}
+
+.course-card_title {
+    color: var(--secondary);
+    font-size: 20px;
+    margin-bottom: 8px;
+}
+
+.course-card_text {
+    font-size: 14px;
+    color: var(--text);
+    margin-bottom: 20px;
+    flex-grow: 1;
+}
+
+.course-card_button {
+    background-color: var(--secondary);
+    color: white;
+    border: none;
+    padding: 12px 0;
+    border-radius: 8px;
+    font-family: 'Inter', sans-serif;
+    font-weight: 600;
+    cursor: pointer;
+    transition: background-color 0.2s;
+}
+
+.course-card_button:hover {
+    background-color: var(--primary);
+}
+
+
+

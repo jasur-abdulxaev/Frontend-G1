@@ -1,0 +1,361 @@
+/* ==========================================================
+   IT LIVE ACADEMY — style.css
+   Figma maketidan olingan qiymatlar asosida yozilgan
+   ========================================================== */
+
+/* ---------- 1. CSS o'zgaruvchilar (Figma dizayn tizimi) ---------- */
+:root {
+  --dark: #061B3A;       /* asosiy matn/fon rangi */
+  --primary: #FF2B21;    /* aksent rang — tugmalar, e'tibor tortadigan joylar */
+  --white: #FFFFFF;
+  --gray-bg: #F5F7FA;    /* och fon rangi (sectionlar orasini ajratish uchun) */
+  --gray-text: #6B7280;  /* ikkinchi darajali matn rangi */
+
+  --font-main: 'Poppins', sans-serif;
+
+  --radius: 12px;        /* Figma'dan: border-radius */
+  --gap: 32px;            /* Figma'dan: elementlar orasidagi masofa */
+  --padding: 24px;        /* Figma'dan: ichki bo'shliq */
+}
+
+/* ---------- 2. Global qoidalar ---------- */
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box; /* padding va border width ichiga hisoblanadi */
+}
+
+body {
+  font-family: var(--font-main);
+  color: var(--dark);
+  line-height: 1.5;
+}
+
+ul {
+  list-style: none;
+}
+
+a {
+  text-decoration: none;
+  color: inherit;
+}
+
+img {
+  max-width: 100%;
+  display: block;
+}
+
+.btn-primary,
+.btn-outline {
+  font-family: var(--font-main);
+  font-weight: 600;
+  font-size: 16px;
+  padding: 12px 24px;
+  border-radius: var(--radius);
+  cursor: pointer;
+  border: 2px solid var(--primary);
+  transition: 0.2s ease;
+}
+
+.btn-primary {
+  background-color: var(--primary);
+  color: var(--white);
+}
+
+.btn-primary:hover {
+  background-color: #e0241b;
+}
+
+.btn-outline {
+  background-color: transparent;
+  color: var(--primary);
+}
+
+.btn-outline:hover {
+  background-color: var(--primary);
+  color: var(--white);
+}
+
+/* ---------- 3. HEADER / NAVBAR ---------- */
+header {
+  background-color: var(--white);
+  box-shadow: 0 2px 8px rgba(6, 27, 58, 0.08);
+  position: sticky;
+  top: 0;
+  z-index: 100;
+}
+
+.navbar {
+  max-width: 1200px;      /* Figma'dagi Frame kengligi */
+  margin: 0 auto;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  padding: 16px var(--padding);
+}
+
+.logo {
+  font-size: 24px;         /* Figma'dan: Size 24px */
+  font-weight: 600;        /* Figma'dan: Weight 600 */
+  line-height: 36px;       /* Figma'dan: Line height 36px */
+  color: var(--dark);
+}
+
+.nav-links {
+  display: flex;
+  gap: var(--gap);
+}
+
+.nav-links a {
+  font-weight: 500;
+  color: var(--dark);
+}
+
+.nav-links a:hover {
+  color: var(--primary);
+}
+
+/* ---------- 4. HERO ---------- */
+.hero {
+  max-width: 1200px;
+  margin: 0 auto;
+  display: flex;
+  align-items: center;
+  gap: var(--gap);
+  padding: 64px var(--padding);
+}
+
+.hero-image,
+.hero-text {
+  flex: 1;
+}
+
+.hero-image img {
+  border-radius: var(--radius);
+}
+
+.hero-text h1 {
+  font-size: 40px;
+  font-weight: 600;
+  margin-bottom: 16px;
+}
+
+.hero-text p {
+  color: var(--gray-text);
+  margin-bottom: 24px;
+}
+
+.hero-buttons {
+  display: flex;
+  gap: 16px;
+}
+
+/* ---------- 5. KURSLAR ---------- */
+.courses {
+  max-width: 1200px;
+  margin: 0 auto;
+  padding: 64px var(--padding);
+  text-align: center;
+}
+
+.courses h2 {
+  font-size: 32px;
+  font-weight: 600;
+  margin-bottom: var(--gap);
+}
+
+.course-list {
+  display: grid;
+  grid-template-columns: repeat(4, 1fr); /* 4 ta karta bir qatorda */
+  gap: var(--gap);
+}
+
+.course-card {
+  background-color: var(--gray-bg);
+  border-radius: var(--radius);
+  padding: var(--padding);
+  text-align: left;
+  box-shadow: 0 2px 8px rgba(6, 27, 58, 0.06);
+
+  /* Kartalar bir xil balandlikda bo'lib, tugma pastda tursin */
+  display: flex;
+  flex-direction: column;
+}
+
+.course-icon {
+  display: inline-block;
+  width: 48px;
+  height: 48px;
+  line-height: 48px;
+  text-align: center;
+  border-radius: 8px;
+  background-color: var(--dark);
+  color: var(--white);
+  font-weight: 600;
+  margin-bottom: 16px;
+}
+
+.course-card h3 {
+  font-size: 18px;
+  margin-bottom: 4px;
+}
+
+.course-card p {
+  color: var(--gray-text);
+  font-size: 14px;
+  margin-bottom: 16px;
+}
+
+.course-card .btn-outline {
+  margin-top: auto; /* tugmani doim pastga suradi */
+  align-self: flex-start;
+}
+
+/* ---------- 6. USTOZLAR ---------- */
+.teachers {
+  max-width: 1200px;
+  margin: 0 auto;
+  padding: 64px var(--padding);
+  text-align: center;
+}
+
+.teachers h2 {
+  font-size: 32px;
+  font-weight: 600;
+  margin-bottom: var(--gap);
+}
+
+.teacher-list {
+  display: grid;
+  grid-template-columns: repeat(4, 1fr);
+  gap: var(--gap);
+}
+
+.teacher-card {
+  background-color: var(--gray-bg);
+  border-radius: var(--radius);
+  padding: var(--padding);
+}
+
+.teacher-card img {
+  width: 96px;
+  height: 96px;
+  border-radius: 50%;
+  margin: 0 auto 16px;
+  object-fit: cover;
+}
+
+.teacher-card h3 {
+  font-size: 16px;
+  margin-bottom: 4px;
+}
+
+.teacher-card p {
+  color: var(--gray-text);
+  font-size: 14px;
+}
+
+/* ---------- 7. CTA ---------- */
+.cta {
+  background-color: var(--dark);
+  color: var(--white);
+  text-align: center;
+  padding: 64px var(--padding);
+}
+
+.cta h2 {
+  font-size: 28px;
+  font-weight: 600;
+  margin-bottom: 12px;
+}
+
+.cta p {
+  color: #cbd5e1;
+  margin-bottom: 24px;
+}
+
+.cta .btn-primary {
+  border-color: var(--primary);
+}
+
+/* ---------- 8. FOOTER ---------- */
+footer {
+  background-color: var(--dark);
+  color: var(--white);
+  padding: 64px var(--padding) 24px;
+}
+
+.footer-columns {
+  max-width: 1200px;
+  margin: 0 auto;
+  display: grid;
+  grid-template-columns: 2fr 1fr 1fr 1fr;
+  gap: var(--gap);
+  margin-bottom: 32px;
+}
+
+.footer-column h4 {
+  font-size: 16px;
+  margin-bottom: 16px;
+}
+
+.footer-column p {
+  color: #94a3b8;
+  font-size: 14px;
+  margin-bottom: 8px;
+}
+
+.footer-column ul li {
+  margin-bottom: 8px;
+}
+
+.footer-column ul li a {
+  color: #94a3b8;
+  font-size: 14px;
+}
+
+.footer-column ul li a:hover {
+  color: var(--white);
+}
+
+.footer-socials {
+  display: flex;
+  gap: 12px;
+  margin-top: 12px;
+}
+
+.footer-socials a {
+  font-size: 13px;
+  color: #94a3b8;
+}
+
+.footer-bottom {
+  max-width: 1200px;
+  margin: 0 auto;
+  text-align: center;
+  padding-top: 24px;
+  border-top: 1px solid rgba(255, 255, 255, 0.1);
+  color: #94a3b8;
+  font-size: 13px;
+}
+
+/* ---------- 9. Mobil moslashuv (asosiy breakpoint) ---------- */
+@media (max-width: 768px) {
+  .navbar {
+    flex-direction: column;
+    gap: 16px;
+  }
+
+  .hero {
+    flex-direction: column;
+  }
+
+  .course-list,
+  .teacher-list {
+    grid-template-columns: repeat(2, 1fr); /* kichik ekranda 2 tadan */
+  }
+
+  .footer-columns {
+    grid-template-columns: 1fr;
+  }
+}
