@@ -1,0 +1,182 @@
+<!DOCTYPE html>
+<html lang="uz">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>IT LIVE Academy — Shaxsiy Kabinet</title>
+
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&display=swap" rel="stylesheet">
+
+  <link rel="stylesheet" href="style.css">
+</head>
+<body>
+
+  <!-- ============================================================
+       TASHQI TUZILMA — GRID
+       sidebar + content (header + stats + courses + profile)
+       ============================================================ -->
+  <div class="layout">
+
+    <!-- ===================== SIDEBAR ===================== -->
+    <aside class="sidebar">
+      <div class="logo">
+        <span class="logo-icon">IT</span>
+        <span>Live</span>
+      </div>
+
+      <nav class="nav-links">
+        <a href="#" class="active">
+          <span class="icon">🏠</span> Bosh sahifa
+        </a>
+        <a href="#">
+          <span class="icon">📚</span> Kurslar
+        </a>
+        <a href="#">
+          <span class="icon">📊</span> Statistika
+        </a>
+        <a href="#">
+          <span class="icon">📝</span> Vazifalar
+        </a>
+        <a href="#">
+          <span class="icon">✉️</span> Xabarlar
+        </a>
+        <a href="#">
+          <span class="icon">👤</span> Profil
+        </a>
+        <a href="#">
+          <span class="icon">⚙️</span> Sozlamalar
+        </a>
+      </nav>
+
+      <a href="#" class="logout">
+        <span class="icon">🚪</span> Chiqish
+      </a>
+    </aside>
+
+    <!-- ===================== ASOSIY KONTENT ===================== -->
+    <div class="content">
+
+      <!-- Yuqori panel — FLEXBOX -->
+      <header class="topbar">
+        <input type="text" class="search" placeholder="Qidirish...">
+        <div class="topbar-right">
+          <span class="notif">🔔</span>
+          <img src="https://i.pravatar.cc/40" alt="Profil" class="avatar-small">
+        </div>
+      </header>
+
+      <h1 class="welcome">Xush kelibsiz, Abdulloh!</h1>
+      <p class="subtitle">Bugungi yutuqlaringiz va o'qish statistikangiz.</p>
+
+      <!-- Statistik kartochkalar — GRID -->
+      <section class="stats">
+        <div class="stat-card">
+          <div class="stat-icon" style="background:#DBEAFE;">🎓</div>
+          <div>
+            <h4>Kurslar</h4>
+            <span class="stat-value">12</span>
+          </div>
+        </div>
+        <div class="stat-card">
+          <div class="stat-icon" style="background:#DCFCE7;">✅</div>
+          <div>
+            <h4>Vazifalar</h4>
+            <span class="stat-value">8</span>
+          </div>
+        </div>
+        <div class="stat-card">
+          <div class="stat-icon" style="background:#FEF3C7;">⭐️</div>
+          <div>
+            <h4>Ball</h4>
+            <span class="stat-value">92%</span>
+          </div>
+        </div>
+        <div class="stat-card">
+          <div class="stat-icon" style="background:#EDE9FE;">🏆</div>
+          <div>
+            <h4>Sertifikatlar</h4>
+            <span class="stat-value">4</span>
+          </div>
+        </div>
+      </section>
+
+      <!-- Ikki ustunli qism: kurslar + profil — GRID -->
+      <section class="two-column">
+
+        <!-- Kurslar ro'yxati — FLEXBOX (har bir qator) -->
+        <div class="panel">
+          <h3 class="section-title">Kurslarim davomiyoti</h3>
+
+          <div class="course-item">
+            <div class="course-info">
+              <span class="course-icon" style="background:#FEE2E2;">🌐</span>
+              <span class="course-name">HTML &amp; CSS asoslari</span>
+            </div>
+            <div class="progress-bar">
+              <div class="progress-fill" style="width:75%; background:#EF3123;"></div>
+            </div>
+            <span class="course-percent">75%</span>
+          </div>
+          <div class="course-item">
+            <div class="course-info">
+              <span class="course-icon" style="background:#FEF3C7;">JS</span>
+              <span class="course-name">JavaScript boshlang'ich</span>
+            </div>
+            <div class="progress-bar">
+              <div class="progress-fill" style="width:60%; background:#F59E0B;"></div>
+            </div>
+            <span class="course-percent">60%</span>
+          </div>
+
+          <div class="course-item">
+            <div class="course-info">
+              <span class="course-icon" style="background:#DBEAFE;">⚛️</span>
+              <span class="course-name">React.js amaliyoti</span>
+            </div>
+            <div class="progress-bar">
+              <div class="progress-fill" style="width:40%; background:#3B82F6;"></div>
+            </div>
+            <span class="course-percent">40%</span>
+          </div>
+
+          <a href="#" class="read-more">Barcha kurslarni ko'rish</a>
+        </div>
+
+        <!-- O'ng panel: profil + keyingi vazifa — FLEXBOX (column) -->
+        <div class="side-panels">
+
+          <div class="panel profile">
+            <img src="https://i.pravatar.cc/64" alt="Abdulloh" class="avatar">
+            <div class="profile-info">
+              <h3>Abdulloh Ne'matov</h3>
+              <p>O'quvchi</p>
+            </div>
+            <button class="btn btn-outline">Tahrirlash</button>
+          </div>
+
+          <div class="panel next-task">
+            <h3 class="section-title">Keyingi vazifa</h3>
+            <p class="task-name">Grid layout bilan dashboard tuzing</p>
+            <p class="task-deadline">Topshirish muddati: 25-may, 18:00</p>
+            <button class="btn btn-primary">Boshlash</button>
+          </div>
+
+          <div class="panel achievement">
+            <h3 class="section-title">Yaqin yutuq</h3>
+            <p>🏆 5 ta kursni tamomlang</p>
+            <div class="progress-bar">
+              <div class="progress-fill" style="width:60%; background:#22C55E;"></div>
+            </div>
+            <span class="achievement-count">3 / 5</span>
+          </div>
+
+        </div>
+
+      </section>
+
+    </div>
+  </div>
+
+</body>
+</html>

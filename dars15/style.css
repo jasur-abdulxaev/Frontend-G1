@@ -1,0 +1,33 @@
+:root {
+    --primary: #EF3123;
+    --secondary: #071A3A;
+    --text: #1F2937;
+    --background: #F5F7FA;
+}
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    font-family: 'Inter', sans-serif;
+    background: var(--background);
+    color: var(--text);
+}
+
+.card {
+    background: white;
+    border-color: var(--secondary);
+    padding: 20px;
+}
+
+.cards .card:first-child {
+    border: 2px solid var(--primary);
+}
+
+.cards .card:last-child {
+    background: var(--secondary);
+    color: white;
+}

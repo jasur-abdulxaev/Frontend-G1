@@ -1,0 +1,99 @@
+:root {
+  --primary: #EF3123;
+  --secondary: #071A3A;
+  --text: #1F2937;
+  --background: #F5F7FA;
+}
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    font-family: "Inter", sans-serif;
+    color: var(--text);
+    background: var(--background);
+}
+
+/* HERO */
+.hero {
+    padding: 80px 40px;
+    text-align: center;
+}
+
+.hero-content {
+    animation: fedeUp 0.8s ease both;
+}
+
+@keyframes fedeUp {
+    0% {
+        opacity: 0;
+        transform: translateY(24px);
+    }
+    100% {
+        opacity: 1;
+        transform: translateY(0);
+    }
+}
+
+.hero-content h1 {
+    color: var(--secondary);
+    font-size: 2.4rem;
+    margin-bottom: 12px;
+}
+
+/* TUGMA */
+.btn {
+    margin-top: 20px;
+    padding: 14px 28px;
+    border: none;
+    border-radius: 8px;
+    background: var(--primary);
+    color: #fff;
+    font-weight: 600;
+    cursor: pointer;
+    transition: transform 0.3s ease;
+}
+
+.btn:hover {
+    transform: translateY(-40px);
+}
+
+.courses {
+    display: flex;
+    gap: 24px;
+    padding: 40px;
+    flex-wrap: wrap;
+    justify-content: center;
+}
+
+.card {
+    background: #fff;
+    border-radius: 12px;
+    padding: 24px;
+    width: 260px;
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
+
+.card:hover {
+    transform: scale(1.05);
+    box-shadow: 0 12px 24px rgba(7, 26, 58, 0.15);
+}
+
+.loader {
+    width: 40px;
+    height: 40px;
+    margin: 40px auto;
+    border: 4px solid var(--background);
+    border-top: 4px solid var(--primary);
+    border-radius: 50%;
+    animation: spin 1s linear infinite;
+}
+
+@keyframes spin {
+    to {
+        transform: rotate(360deg);
+    }
+}
