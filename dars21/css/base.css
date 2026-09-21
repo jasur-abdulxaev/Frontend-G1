@@ -1,0 +1,19 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    font-family: 'Inter', sans-serif;
+    background: var(--background);
+    color: var(--text);
+}
+
+.page {
+    display: flex;
+    gap: 24px;
+    flex-wrap: wrap;
+    padding: 40px;
+}
+

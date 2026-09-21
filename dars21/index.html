@@ -1,0 +1,42 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>21-dars. CSS - Arxitekturasi va BEM</title>
+
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&display=swap" rel="stylesheet">
+
+    <link rel="stylesheet" href="./css/variables.css">
+    <link rel="stylesheet" href="./css/base.css">
+    <link rel="stylesheet" href="./css/components.css">
+    <link rel="stylesheet" href="./css/utilities.css">
+</head>
+<body>
+    
+    <main class="page">
+
+        <article class="card">
+            <img src="./images/mountain.png" alt="Tog' manzarasi" class="card__image">
+            <div class="card__body">
+                <h3 class="card__title">Sayohat Foydasi</h3>
+                <p class="card__text">Dunyoni kashf eting va yangi tajribalar oling.</p>
+                <button class="card__button">Batafsil</button>
+            </div>
+        </article>
+
+        <!-- Modifier bilan variant: featured ajratilgan variant -->
+         <article class="card card--featured">
+            <img src="./images/lake.png" alt="Ko'l manzarasi" class="card__image">
+            <div class="card__body">
+                <h3 class="card__title">Tanlangan Sayohat</h3>
+                <p class="card__text">Eng mashhur yo'nalishlar shu yerda.</p>
+                <button class="card__button">Batafsil</button>
+            </div>
+         </article>
+
+    </main>
+
+</body>
+</html>
